@@ -52,20 +52,14 @@ Step 5: Simulate the Circuit
 Step 6: Troubleshoot and Refine
 1.	Check Wiring: Ensure all connections between the PIR sensor, Arduino, and (optional) LED are correctly made.
 2.	Review Code: Make sure the code is properly uploaded and written without syntax errors.
-3.	Adjust Sensor Angle: If necessary, reposition the sensor or increase detection range in simulation to trigger motion detection.
-   
+3.	Adjust Sensor Angle: If necessary, reposition the sensor or increase detection range in simulation to trigger motion detection.   
 Step 7: Save Your Work
 1.	Stop Simulation: Click the “Stop Simulation” button once testing is complete.
 2.	Save the Circuit: Click “Save” at the top of the screen to store your design and code for future use.
-
 ## Circuit Diagram:
 <img width="1919" height="973" alt="image" src="https://github.com/user-attachments/assets/70763183-6c51-435d-bf26-84117c2a3192" />
 ## Schematic Diagram:
-![Uploading image.png…]()
-
-
-
-
+<img width="985" height="762" alt="image" src="https://github.com/user-attachments/assets/b6ad7b9e-ebbd-4b2c-81cc-19db29785ee8" />
 # Code:
 #include <LiquidCrystal.h>
 
@@ -109,14 +103,8 @@ void loop() {
   }
 }
 
-
-
 # Output:
-Uploading 494508252-eb322e01-25a1-4788-9a6a-a15084ff4294.mp4…
-
-
-
-
+https://github.com/user-attachments/assets/aab7c0d6-3729-4d32-a52d-782e455753f1
 # Result:
 The PIR sensor successfully detected motion and triggered the Arduino to turn ON the built-in LED. The LED remained OFF when no motion was present, confirming correct circuit and code functionality.
 
