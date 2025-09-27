@@ -58,12 +58,61 @@ Step 7: Save Your Work
 1.	Stop Simulation: Click the “Stop Simulation” button once testing is complete.
 2.	Save the Circuit: Click “Save” at the top of the screen to store your design and code for future use.
 
+## Circuit Diagram:
+<img width="1919" height="973" alt="image" src="https://github.com/user-attachments/assets/70763183-6c51-435d-bf26-84117c2a3192" />
+## Schematic Diagram:
+![Uploading image.png…]()
+
+
+
 
 # Code:
+#include <LiquidCrystal.h>
+
+// Initialize LCD (RS, E, D4, D5, D6, D7)
+LiquidCrystal lcd(7, 6, 5, 4, 3, 2);
+
+int pirPin = 8;   // PIR sensor output pin
+int ledPin = 9;   // LED pin
+int pirState = LOW;
+int val = 0;
+
+void setup() {
+  pinMode(pirPin, INPUT);
+  pinMode(ledPin, OUTPUT);
+
+  lcd.begin(16, 2);
+  lcd.print("Motion Detector");
+  delay(2000);
+  lcd.clear();
+}
+
+void loop() {
+  val = digitalRead(pirPin);
+
+  if (val == HIGH) {
+    digitalWrite(ledPin, HIGH);
+    if (pirState == LOW) {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("Motion Detected");
+      pirState = HIGH;
+    }
+  } else {
+    digitalWrite(ledPin, LOW);
+    if (pirState == HIGH) {
+      lcd.clear();
+      lcd.setCursor(0, 0);
+      lcd.print("No Motion");
+      pirState = LOW;
+    }
+  }
+}
 
 
 
 # Output:
+Uploading 494508252-eb322e01-25a1-4788-9a6a-a15084ff4294.mp4…
 
 
 
